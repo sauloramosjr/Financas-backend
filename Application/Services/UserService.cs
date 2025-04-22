@@ -44,7 +44,7 @@ public class UserService : IUserService
 
         var acessosCriados = await _UserAccessRepo.GetByUserIdAsync(user.Id);
         var result = _mapper.Map<UserDto>(user);
-        result.Acessos = acessosCriados.Select(x => new CreateUserAccessDto
+        result.Acessos = acessosCriados.Select(x => new CreatUserAccessInUserDto
         {
             Sistema = x.Sistema,
             Role = x.Role

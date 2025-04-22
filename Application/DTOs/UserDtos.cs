@@ -21,7 +21,7 @@ public class CreateUserDto
     public required string Password { get; set; } = string.Empty;
 
     [Required]
-    public List<CreateUserAccessDto> Acessos { get; set; } = new();
+    public List<CreatUserAccessInUserDto> Acessos { get; set; } = new();
 }
 
 public class UserDto : CreateUserDto
